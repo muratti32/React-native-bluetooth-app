@@ -100,16 +100,6 @@ const Settings = () => {
                 {state.connectedDevice == null ? "Cihaz Tara":"Bağlı Cihazlar"}
             </Button>
 
-
-            {/* <FlatList
-                data={list}
-                renderItem={({ item }) => renderItem(item)}
-                keyExtractor={item => item.id}
-            />
-
-            <View style={styles.deviceList} >
-                <BtDeviceList />
-            </View> */}
         </>
     )
 }
