@@ -11,6 +11,7 @@ import ModalMenu from '../../components/ModalMenu'
 import DeviceClock from './clock/deviceClock'
 import BtScanButton from './btScanButton'
 
+import BtScheduleButton from './btScheduleButton'
 import { useDispatch, useSelector } from 'react-redux'
 import { addBLE, setConnectedDevice, startScan } from '../store/actions'
 import { stringToBytes, bytesToString } from "convert-string";
@@ -79,6 +80,8 @@ const Settings = () => {
                 startScan = {startScan}
                 retrieveConnected = {retrieveConnected}
             />
+
+            <BtScheduleButton />
 
         </>
     )

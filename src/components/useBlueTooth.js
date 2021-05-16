@@ -47,7 +47,7 @@ export default  () => {
     const startScan = () => {
         if (!isScanning) {
             BleManager.scan([], 3, true).then((results) => {
-                console.log('Scanning...');
+                //console.log('Scanning...');
                 setIsScanning(true);
             }).catch(err => {
                 console.error(err);
@@ -56,7 +56,7 @@ export default  () => {
     }
 
     const handleStopScan = () => {
-        console.log('Scan is stopped');
+        //console.log('Scan is stopped');
         setIsScanning(false);
     }
 

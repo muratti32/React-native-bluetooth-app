@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 import HomeScreen from '../screens/homeScreen'
 import SettingsScreen from '../screens/settings'
+import SettingsStack from './settingsStack'
 import {Provider,useDispatch} from 'react-redux'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -40,7 +41,7 @@ const index = (props) => {
                 iconName = focused
                     ? 'home'
                     : 'home-outline';
-                } else if (route.name === 'settings') {
+                } else if (route.name === 'settings_stack') {
                 iconName = focused ? 'settings' : 'settings-outline';
                 }
 
@@ -54,7 +55,7 @@ const index = (props) => {
             }}
         >
             <Tab.Screen options={{tabBarLabel:"Ana Kontrol"}} name="home" component={HomeScreen} />
-            <Tab.Screen options={{tabBarLabel:"Ayarlar"}} name="settings" component={SettingsScreen} />
+            <Tab.Screen options={{tabBarLabel:"Ayarlar"}} name="settings_stack" component={SettingsStack} />
         </Tab.Navigator>
  
     )

@@ -28,7 +28,7 @@ const ModalMenu = (props) => {
 
     }, [modalVisible])
 
-
+    console.log("asdfasfdas",modalVisible)
 
 
     //Menu Items
