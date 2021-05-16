@@ -54,7 +54,6 @@ const ModalMenu = (props) => {
 
     const handleRenderItemPress = (item) => {
         connect(item)
-
         setModalVisible(false)
     }
 
@@ -75,16 +74,24 @@ const ModalMenu = (props) => {
 
     const ListHeaderComponent = () => (
         <View style={styles.listHeader}>
-            <Text style={styles.listHeaderTitle} >{type == "scan" ? "Bağlan":"Bağlantı kes"} </Text>
+            {(listItems.length !== 0) ?
+                <Text style={styles.listHeaderTitle} >{type == "scan" ? "Bağlan":"Bağlantı kes"} </Text>
+                : 
+                <Text style={styles.listHeaderTitle} >Bağlı Cihaz Yok</Text>
+            }
         </View>
             
     )
 
 
 
-    const getItems = () => {
+    const GetItems = () => {
         return (
             <View style={styles.insideCard}>
+                {/* <View style={styles.noRecordWarningTitle}>
+                    <Text style={styles.noRecordWarningTitleText} >Haloo</Text>
+                </View> */}
+                
 
                 <View style={styles.list} >
                     {
@@ -123,7 +130,7 @@ const ModalMenu = (props) => {
     }
 
 
-    const getModal = () => {
+    const DeviceModal = () => {
         return (
             <Modal
                 animationType="slide"
@@ -139,10 +146,10 @@ const ModalMenu = (props) => {
                         <BackButton />
                         <Text style={styles.headerTitle} >Bluetooth cihazlar</Text>
                     </View>
-                    <View
-                        style={styles.centeredView}>
+                    <View  style={styles.centeredView}>
+
                         <View style={styles.modalView}>
-                            {getItems()}
+                            <GetItems />
                         </View>
                     </View>
                 </KeyboardAvoidingView>
@@ -152,7 +159,7 @@ const ModalMenu = (props) => {
 
     return (
         <View>
-            {getModal()}
+            <DeviceModal />
         </View>
     )
 }
@@ -284,5 +291,14 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginTop: 0,
         alignItems: "center",
+    },
+    noRecordWarningTitle : {
+        marginVertical : 7,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    noRecordWarningTitleText: {
+        fontWeight:"200",
+        fontSize:19,
     }
 })

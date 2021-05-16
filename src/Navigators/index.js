@@ -53,8 +53,8 @@ const index = (props) => {
             inactiveTintColor: 'gray',
             }}
         >
-            <Tab.Screen name="home" component={HomeScreen} />
-            <Tab.Screen name="settings" component={SettingsScreen} />
+            <Tab.Screen options={{tabBarLabel:"Ana Kontrol"}} name="home" component={HomeScreen} />
+            <Tab.Screen options={{tabBarLabel:"Ayarlar"}} name="settings" component={SettingsScreen} />
         </Tab.Navigator>
  
     )

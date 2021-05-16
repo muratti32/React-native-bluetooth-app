@@ -20,12 +20,10 @@ const reducer = (draftState = INITIAL_STATE, action) => {
             draftState.BLEList = action.list;
             return;
         case  actionTypes.SET_CONNECTED_DEVICE:
-            console.log("Reducer connected device : ",action.connectedDevice);
             draftState.connectedDevice = action.connectedDevice;
             return;
 
         case actionTypes.DEVICE_BLUETOOTH_ENABLED:
-            console.log("DEVICE_BLUETOOTH_ENABLED : ", action.isEnabled)
             draftState.deviceBluetoothEnabled = action.isEnabled;
             return;
         case actionTypes.CHANGE_STATUS :

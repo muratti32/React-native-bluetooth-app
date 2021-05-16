@@ -21,7 +21,7 @@ const btOpenCloseButton = ({enableBlueTooth}) => {
             marginHorizontal : 9,
             height : 40,
             alignItems : "center",
-            justifyContent : "center",
+            paddingHorizontal : 11,
             backgroundColor : colors.primary
         }
     }
@@ -67,6 +67,6 @@ export default btOpenCloseButton
 
 const styles = StyleSheet.create({
     icon: {
-        
+        marginEnd:13,
     },
 })

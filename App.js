@@ -26,10 +26,16 @@ const theme = {
   },
 };
 
+
+
 const App = () => {
 
- 
-
+  useEffect(() => {
+    return () => {
+      console.log("halo setConnectedDevic")
+    };
+  }, [])
+  
   return (
     <Provider store={store}>
 
